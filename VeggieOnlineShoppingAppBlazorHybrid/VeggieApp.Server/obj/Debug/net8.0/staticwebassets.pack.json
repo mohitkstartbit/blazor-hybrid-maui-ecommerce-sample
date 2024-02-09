@@ -1,0 +1,133 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\almondsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\almondsimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\appleimg.jpg",
+      "PackagePath": "staticwebassets\\images\\appleimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\applejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\applejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\apricotsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\apricotsimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\bananaimg.jpg",
+      "PackagePath": "staticwebassets\\images\\bananaimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner2.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\beetjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\beetjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\bellpaperimg.jpg",
+      "PackagePath": "staticwebassets\\images\\bellpaperimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\blueberryjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\blueberryjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\brocolliimg.jpg",
+      "PackagePath": "staticwebassets\\images\\brocolliimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\carrotimg.jpg",
+      "PackagePath": "staticwebassets\\images\\carrotimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\cashewsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\cashewsimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\grapejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\grapejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\greenbeansimg.jpg",
+      "PackagePath": "staticwebassets\\images\\greenbeansimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\hazelnutsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\hazelnutsimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\kiwiimg.jpg",
+      "PackagePath": "staticwebassets\\images\\kiwiimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\ladyfingerimg.jpg",
+      "PackagePath": "staticwebassets\\images\\ladyfingerimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\lemoning.jpg",
+      "PackagePath": "staticwebassets\\images\\lemoning.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\mangoimg.jpg",
+      "PackagePath": "staticwebassets\\images\\mangoimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\pineaapleimg.jpg",
+      "PackagePath": "staticwebassets\\images\\pineaapleimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\pistachiosimg.jpg",
+      "PackagePath": "staticwebassets\\images\\pistachiosimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\pomegranatejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\pomegranatejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\purplecabbage1img.jpg",
+      "PackagePath": "staticwebassets\\images\\purplecabbage1img.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\raisinsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\raisinsimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\tartcherryjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\images\\tartcherryjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\tomatoimg.jpg",
+      "PackagePath": "staticwebassets\\images\\tomatoimg.jpg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\wwwroot\\images\\walnutsimg.jpg",
+      "PackagePath": "staticwebassets\\images\\walnutsimg.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VeggieApp.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VeggieApp.Server.props",
+      "PackagePath": "build\\VeggieApp.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VeggieApp.Server.props",
+      "PackagePath": "buildMultiTargeting\\VeggieApp.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VeggieApp.Server.props",
+      "PackagePath": "buildTransitive\\VeggieApp.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

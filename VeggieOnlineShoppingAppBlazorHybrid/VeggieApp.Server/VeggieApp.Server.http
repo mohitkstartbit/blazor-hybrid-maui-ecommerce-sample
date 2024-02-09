@@ -1,0 +1,6 @@
+@VeggieApp.Server_HostAddress = http://localhost:5291
+
+GET {{VeggieApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

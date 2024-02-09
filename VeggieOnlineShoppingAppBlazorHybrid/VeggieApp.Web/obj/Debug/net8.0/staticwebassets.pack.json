@@ -1,0 +1,249 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\obj\\Debug\\net8.0\\compressed\\eljslny6xy.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\VeggieApp.Web.styles.css",
+      "PackagePath": "staticwebassets\\VeggieApp.Web.styles.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\obj\\Debug\\net8.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\obj\\Debug\\net8.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\all.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\brands.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\brands.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\conflict-detection.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\fontawesome.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\fontawesome.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\regular.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\regular.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\solid.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\solid.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\v4-shims.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\js\\v4-shims.min.js"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\sprites\\brands.svg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\sprites\\regular.svg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\sprites\\solid.svg"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\css\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\css\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Web\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.VeggieApp.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.VeggieApp.Web.props",
+      "PackagePath": "build\\VeggieApp.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.VeggieApp.Web.props",
+      "PackagePath": "buildMultiTargeting\\VeggieApp.Web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.VeggieApp.Web.props",
+      "PackagePath": "buildTransitive\\VeggieApp.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
