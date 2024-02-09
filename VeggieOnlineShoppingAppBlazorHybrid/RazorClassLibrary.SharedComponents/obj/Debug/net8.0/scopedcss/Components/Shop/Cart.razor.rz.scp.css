@@ -1,0 +1,92 @@
+
+/* Main Header Bar of Cart Component */
+.my-Cart[b-wjkw8t426w] {
+    background-color: #245b1d;
+    color: white;
+    padding: 10px;
+    font-family: cursive;
+}
+
+/* ----- If Cart is Empty  ---- */
+.Item-not-available p[b-wjkw8t426w] {
+    font-family: cursive;
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+.Item-not-available p span[b-wjkw8t426w] {
+    font-size: 50px;
+    color: red;
+}
+
+.Item-not-available button[b-wjkw8t426w] {
+    background-color: #245b1d;
+    color: white;
+    border: none;
+    width: 44%;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+/*-------- Product view in cart---------*/
+.List-box[b-wjkw8t426w] {
+    border: 1px solid #cfcfcf;
+    margin-top: 10px;
+    padding: 12px;
+}
+
+.List-box img[b-wjkw8t426w]{
+    width:50%;
+    height:9rem;
+}
+.Cart-product p[b-wjkw8t426w] {
+    font-size: 23px;
+    color: #294a04;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.decrease-button[b-wjkw8t426w] {
+    background-color: white;
+    border-radius: 20px;
+    width: 38px;
+    font-size: 25px;
+    border: 1px solid #818181;
+}
+.increase-button[b-wjkw8t426w] {
+    background-color: white;
+    border-radius: 20px;
+    width: 38px;
+    font-size: 25px;
+    border: 1px solid #818181;
+}
+
+.total-price[b-wjkw8t426w] {
+    font-size: 23px;
+    line-height: 120px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.place-order-box[b-wjkw8t426w] {
+    border: 1px solid #cfcfcf;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.place-order-box p[b-wjkw8t426w] {
+    font-family: cursive; 
+    font-size: 21px;
+    font-weight: 600; 
+    color: #245b1d;
+}
+.place-order-box p span[b-wjkw8t426w]{
+    color:black;
+}
+
+.place-order-box button[b-wjkw8t426w] {
+    background-color:#245b1d;
+    color:white;
+    font-size:18px;
+    font-family: cursive;
+}

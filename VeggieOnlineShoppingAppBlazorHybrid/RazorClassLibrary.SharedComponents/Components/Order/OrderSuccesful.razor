@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Components.Routing;
+@inject ProductStore _productStore;
+@inject AuthenticationStateProvider _authProvider;
+<div class="row">
+    <div class="col-md-4 ">
+    </div>
+    <div class="col-md-4 text-center order-box">
+        <h2>Congratulations !</h2>
+        <p>Order Placed Succesfully !</p>
+        <NavLink href="/">
+            <button class="mt-5 mb-5">Continue Shopping</button>
+        </NavLink>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+

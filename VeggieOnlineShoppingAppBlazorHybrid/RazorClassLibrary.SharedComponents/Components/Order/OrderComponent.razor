@@ -1,0 +1,22 @@
+﻿@inject IOrderService _orderServcie
+@using VeggieApp.Model.Model; 
+@using System.Text.Json;
+<h3>All Orders</h3>
+@foreach (var data in OrdersList)
+{
+    <div>
+        @data.OrderId
+    </div>
+}
+
+@code {
+    public List<Order> OrdersList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await _orderServcie.GetOrderList();
+        //var data = JsonSerializer.Deserialize<IEnumerable<Order>>(response);
+        //var data  = response.Result as IEnumerable<Order>;
+        OrdersList = response.ToList();
+    }
+}

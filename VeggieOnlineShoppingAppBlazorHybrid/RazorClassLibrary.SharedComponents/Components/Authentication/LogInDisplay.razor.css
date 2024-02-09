@@ -1,0 +1,26 @@
+﻿.log-out {
+    text-decoration: none;
+    color: black;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}
+
+.register-button {
+    text-decoration: none;
+    color: white;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}
+
+.login-button {
+    text-decoration: none;
+    color: white;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}

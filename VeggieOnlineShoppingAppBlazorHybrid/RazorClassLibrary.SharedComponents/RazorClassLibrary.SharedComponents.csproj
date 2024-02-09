@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Components\Authentication\LogInDisplay.razor.css" />
+    <None Remove="Components\Order\OrderSuccesful.razor.css" />
+    <None Remove="Components\Shop\Cart.razor.css" />
+    <None Remove="Components\Shop\Shop.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Components\Authentication\LogInDisplay.razor.css" />
+    <Content Include="Components\Order\OrderSuccesful.razor.css" />
+    <Content Include="Components\Shop\Cart.razor.css" />
+    <Content Include="Components\Shop\Shop.razor.css" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VeggieApp.DataSource\VeggieApp.DataSource.csproj" />
+    <ProjectReference Include="..\VeggieApp.Model\VeggieApp.Model.csproj" />
+  </ItemGroup>
+
+</Project>

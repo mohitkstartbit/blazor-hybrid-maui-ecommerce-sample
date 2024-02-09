@@ -1,0 +1,18 @@
+.order-box[b-xa3c0450oi] {
+    margin-top: 172px;
+    border-bottom: 1px solid lightgray;
+}
+
+.order-box h2[b-xa3c0450oi]{
+    color:red;
+    font-size:35px;
+}
+
+.order-box button[b-xa3c0450oi] {
+    background-color:#245b1d;
+    color:white;
+    border:none;
+    width:44%;
+    padding:7px;
+    border-radius:6px;
+}

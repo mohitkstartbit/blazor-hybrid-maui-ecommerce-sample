@@ -1,0 +1,171 @@
+﻿@using Microsoft.AspNetCore.Components.Routing;
+@inject ProductStore _productStore
+@inject AuthenticationStateProvider _authProvider;
+@inject NavigationManager _navigationManager
+<div class="row">
+    <div class="col-md-12 text-start my-Cart">
+        <h1> My Cart</h1>
+    </div>
+</div>
+
+@* -------- If cart is empty -----*@
+@if (cartlist.Count > 0)
+{
+
+    foreach (var item in cartlist)
+    {
+        <div class="row List-box">
+            <div class="col-md-4 text-center">
+                <img class="card-img-top" src="@Helper.GetImage(item.ProductImage)" alt="VegetableImages">
+            </div>
+            <div class="col-md-8"></div>
+
+            <div class="col-md-4 text-center Cart-product">
+                <p>@item.ProductName</p>
+            </div>
+            <div class="col-md-8">
+            </div>
+
+
+            <div class="col-md-4 text-center">
+                @*  <input value="@item.Quantity" readonly style="text-align:center;border:none;"/> *@
+                <p>@item.Quantity</p>
+            </div>
+            <div class="col-md-8"></div>
+
+
+            <div class="col-md-4 text-center">
+                <div style="display:inline-flex;">
+                    <button @onclick="args=>DecreaseQuantity(item.Productid)" class="decrease-button">
+                        -
+                    </button>&nbsp;&nbsp;&nbsp;
+                    <button class="increase-button" @onclick="args=>IncreaseQuantity(item.Productid)"> + </button>
+
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+
+
+            <div class="col-md-4 text-center">
+                <p class="total-price">Price :$@item.TotalPrice</p>
+            </div>
+            <div class="col-md-8">
+            </div>
+        </div>
+
+    }
+    <div class="row m-5">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 col-sm-12"></div>
+                <div class="col-md-4 col-sm-12 text-center place-order-box">
+
+                    <p>Total Payable Ammount: &nbsp; &nbsp;<span>$@TotalPayableAmmount </span></p>
+                    <button class="btn" @onclick="PlaceOrder">Place Order</button>
+                </div>
+                <div class="col-md-4 col-sm-12"></div>
+            </div>
+
+        </div>
+
+    </div>
+}
+else
+{
+
+    <div class="row">
+        <div class="col-md-12 text-center Item-not-available">
+            <p><span>Oops!</span><br />There is no item. <br />Please add item first. </p>
+            <NavLink href="/">
+                <button class="mt-5 mb-5">Continue Shopping</button>
+            </NavLink>
+        </div>
+    </div>
+}
+
+
+@code {
+    @* public int Quantity { get; set; } = 1; *@
+    public int TotalPayableAmmount { get; set; } = 0;
+    public List<Product> CartItems;
+    public List<CartViewModel> cartlist = new List<CartViewModel>();
+    public List<OrderViewModel> OrderedItems;
+    [Inject]
+    public IProductService productService { get; set; }
+    [Inject]
+    public IOrderService _orderService { get; set; }
+    string userId = "";
+    protected override async void OnInitialized()
+    {
+        var asp = await _authProvider.GetAuthenticationStateAsync();
+        if (asp.User.Identity.IsAuthenticated)
+        {
+            var id = asp.User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.NameIdentifier);
+            if (id != null)
+            {
+                userId = id.Value;
+            }
+        }
+        var data = productService.GetCart().Where(s => s.UserId == userId).ToList();
+        cartlist = data;
+
+        CountTotalAmmount(false);
+
+
+
+        @*  _productStore.CartNewList = productService.GetCart().ToList();*@
+    }
+    public void CountTotalAmmount(bool status)
+    {
+        TotalPayableAmmount = 0;
+        TotalPayableAmmount = cartlist.Sum(s => s.TotalPrice);
+        if (status)
+        {
+            OnInitialized();
+        }
+        StateHasChanged();
+    }
+
+    public void PlaceOrder()
+    {
+        var items = new List<OrderItem>();
+
+        foreach (var item in cartlist)
+        {
+            items.Add(new()
+                {
+                    product_id = item.Productid,
+                    list_price = item.ListPrice,
+                    quantity = item.Quantity
+                });
+        }
+        _orderService.CreateOrder(new()
+            {
+                OrderItems = items,
+                Orders = new()
+                {
+                    UserId = userId,
+                    OrderStatus = 2
+                }
+            });
+
+        productService.ClearCart(userId);
+        
+        _navigationManager.NavigateTo("OrderCreatedSuccesfullPage");
+    }
+
+    public void DecreaseQuantity(int ProductId)
+    {
+        productService.DecreaseQuantity(ProductId, userId);
+
+        CountTotalAmmount(true);
+    }
+
+    public void IncreaseQuantity(int ProductId)
+    {
+        productService.IncreaseQuantity(ProductId, userId);
+        CountTotalAmmount(false);
+    }
+}
+
+

@@ -1,0 +1,165 @@
+/* _content/RazorClassLibrary.SharedComponents/Components/Authentication/LogInDisplay.razor.rz.scp.css */
+.log-out[b-9r84s6gxau] {
+    text-decoration: none;
+    color: black;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}
+
+.register-button[b-9r84s6gxau] {
+    text-decoration: none;
+    color: white;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}
+
+.login-button[b-9r84s6gxau] {
+    text-decoration: none;
+    color: white;
+    background-color: #13a900;
+    padding: 6px;
+    border-radius: 3px;
+    font-family: cursive;
+}
+/* _content/RazorClassLibrary.SharedComponents/Components/Order/OrderSuccesful.razor.rz.scp.css */
+.order-box[b-xa3c0450oi] {
+    margin-top: 172px;
+    border-bottom: 1px solid lightgray;
+}
+
+.order-box h2[b-xa3c0450oi]{
+    color:red;
+    font-size:35px;
+}
+
+.order-box button[b-xa3c0450oi] {
+    background-color:#245b1d;
+    color:white;
+    border:none;
+    width:44%;
+    padding:7px;
+    border-radius:6px;
+}
+/* _content/RazorClassLibrary.SharedComponents/Components/Shop/Cart.razor.rz.scp.css */
+
+/* Main Header Bar of Cart Component */
+.my-Cart[b-wjkw8t426w] {
+    background-color: #245b1d;
+    color: white;
+    padding: 10px;
+    font-family: cursive;
+}
+
+/* ----- If Cart is Empty  ---- */
+.Item-not-available p[b-wjkw8t426w] {
+    font-family: cursive;
+    font-size: 22px;
+    margin-top: 50px;
+}
+
+.Item-not-available p span[b-wjkw8t426w] {
+    font-size: 50px;
+    color: red;
+}
+
+.Item-not-available button[b-wjkw8t426w] {
+    background-color: #245b1d;
+    color: white;
+    border: none;
+    width: 44%;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+/*-------- Product view in cart---------*/
+.List-box[b-wjkw8t426w] {
+    border: 1px solid #cfcfcf;
+    margin-top: 10px;
+    padding: 12px;
+}
+
+.List-box img[b-wjkw8t426w]{
+    width:50%;
+    height:9rem;
+}
+.Cart-product p[b-wjkw8t426w] {
+    font-size: 23px;
+    color: #294a04;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.decrease-button[b-wjkw8t426w] {
+    background-color: white;
+    border-radius: 20px;
+    width: 38px;
+    font-size: 25px;
+    border: 1px solid #818181;
+}
+.increase-button[b-wjkw8t426w] {
+    background-color: white;
+    border-radius: 20px;
+    width: 38px;
+    font-size: 25px;
+    border: 1px solid #818181;
+}
+
+.total-price[b-wjkw8t426w] {
+    font-size: 23px;
+    line-height: 120px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.place-order-box[b-wjkw8t426w] {
+    border: 1px solid #cfcfcf;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.place-order-box p[b-wjkw8t426w] {
+    font-family: cursive; 
+    font-size: 21px;
+    font-weight: 600; 
+    color: #245b1d;
+}
+.place-order-box p span[b-wjkw8t426w]{
+    color:black;
+}
+
+.place-order-box button[b-wjkw8t426w] {
+    background-color:#245b1d;
+    color:white;
+    font-size:18px;
+    font-family: cursive;
+}
+/* _content/RazorClassLibrary.SharedComponents/Components/Shop/Shop.razor.rz.scp.css */
+.product-card[b-duyrnumkf5] {
+    padding: 10px;
+    box-shadow: 0 18px 8px -9px rgba(0, 0, 0, 0.2);
+}
+.product-card-inner[b-duyrnumkf5] {
+    height: 18rem;
+    border: 1px solid #efefef;
+    padding: 10px;
+}
+
+.image-card[b-duyrnumkf5] {
+    width: 100%;
+    height: 10rem;
+}
+
+.image-card img[b-duyrnumkf5]{
+    width: 100%;
+    height: 10rem;
+}
+
+.add-cart-button[b-duyrnumkf5] {
+    width: 100%;
+    background-color: #245b1d;
+    color: white;
+}

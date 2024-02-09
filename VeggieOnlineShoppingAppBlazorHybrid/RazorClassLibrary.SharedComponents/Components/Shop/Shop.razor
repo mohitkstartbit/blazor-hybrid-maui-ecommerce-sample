@@ -1,0 +1,115 @@
+﻿@using Microsoft.AspNetCore.Components.Routing;
+@inject AuthenticationStateProvider _authProvider;
+@inject NavigationManager _navmanager
+<main class="container">
+    <div class="row g-5">
+
+        @foreach (var Item in Productlist)
+        {
+            <div class="col-md-3 col-sm-6 product-card">
+                <div class="card hover-shadow product-card-inner">
+                    <div class="image-card">
+                        <img class="card-img-top" src="@Helper.GetImage(Item.product_image)" alt="@Helper.GetImage(Item.product_image)">
+                    </div>
+                    <div class="card-body text-center">
+                        <p class="card-text" style="font-size:20px;color:#245b1d;">@Item.product_name</p>
+                        <p class="card-text">$@Item.list_price</p>
+                    </div>
+                </div>
+                <NavLink href="cart">
+                    <button class="btn add-cart-button" @onclick="args=>Addproduct(Item.product_id)"> Add To Cart</button>
+                </NavLink>
+            </div>
+        }
+    </div>
+</main>
+
+@code {
+    public string userId = "";
+    public List<Product> Productlist = new();
+    [Inject]
+    public IProductService ProductService { get; set; }
+    //  [Inject]
+    // ProductStore _productStore { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await ProductService.GetAll();
+        Productlist = response.ToList();
+        var asp = await _authProvider.GetAuthenticationStateAsync();
+        if (asp.User.Identity.IsAuthenticated)
+        {
+            var id = asp.User.Claims.FirstOrDefault(s => s.Type == ClaimTypes.NameIdentifier);
+            if (id!=null)
+            {
+                userId = id.Value;
+            }
+        }
+    }
+    public async Task Addproduct(int id)
+    {
+        var product = Productlist.FirstOrDefault(s => s.product_id == id);
+        var asp = await _authProvider.GetAuthenticationStateAsync();
+        if (product != null && asp.User.Identity.IsAuthenticated)
+        {
+            var cartData = ProductStore.CartNewList.FirstOrDefault(s => s.Productid == id && s.UserId == userId);
+            if (cartData != null)
+            {
+                cartData.Quantity += 1;
+                cartData.TotalPrice = cartData.Quantity * cartData.ListPrice;
+            }
+            else
+            {
+                ProductService.addcart(new()
+                    {
+                        Productid = product.product_id,
+                        ProductName = product.product_name,
+                        ProductImage = product.product_image,
+                        ListPrice = product.list_price,
+                        TotalPrice = product.list_price,
+                        Quantity = 1,
+                        UserId = userId
+                    });
+            }
+        }
+        else
+        {
+            //Show the message
+            _navmanager.NavigateTo("login");
+
+        }
+        // foreach (var product in Productlist)
+        // {
+        //     if (product.product_id == id)
+        //     {
+        //         foreach (var cartitem in _productStore.CartNewList)
+        //         {
+        //             if (cartitem.Productid == product.product_id)
+        //             {
+        //                 cartitem.Quantity += 1;
+        //                 cartitem.TotalPrice = cartitem.Quantity * cartitem.ListPrice;
+        //                // _productStore.SetValue();
+        //                 return;
+        //             }
+        //         }
+
+        //         ProductService.addcart(new()
+        //             {
+        //                 Productid = product.product_id,
+        //                 ProductName = product.product_name,
+        //                 ProductImage = product.product_image,
+        //                 ListPrice = product.list_price,
+        //                 TotalPrice = product.list_price,
+        //                 Quantity = 1,
+        //                 UserId = userId
+        //             });
+        //         // _productStore.SetValue();
+        //         return;
+        //     }
+        // }
+    }
+
+   
+
+
+}
+
