@@ -1,0 +1,1 @@
+C:\mohitk\git\blazor-hybrid-maui-ecommerce-sample\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Hybrid\VeggieApp.Hybrid.csproj;x64
