@@ -17,6 +17,7 @@ Introducing our cutting-edge application built with MAUI Blazor Hybrid and Blazo
 - Web View of application
 ![screencapture-localhost-2024-02-08-16_11_11](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/b9f100d7-fb84-4ade-a247-6dd7bc1fa5e1)
 ![screencapture-localhost-cart-2024-02-08-16_12_02](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/7c1107ef-86de-447c-a9ff-d73ef14b299f)
-
+![loginwebview](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/244c4439-1d69-4940-b469-a42c8c8e2d23)
+![registerwebview](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/020aed5f-bc9a-4ccc-a102-7a9c86268c85)
 -Desktop App View of Application
 ![desktopapp1](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/0480f3e0-c1b1-42ba-bfb3-f4c12a4d722f)
