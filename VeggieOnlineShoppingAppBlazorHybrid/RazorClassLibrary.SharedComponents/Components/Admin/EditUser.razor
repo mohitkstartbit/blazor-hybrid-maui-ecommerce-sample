@@ -1,0 +1,97 @@
+﻿@inject IAdminService AdminService
+
+@if (SelectedUser != null)
+{
+    <RadzenCard Style="margin-top: 20px; padding: 20px; border-radius: 8px;">
+        <RadzenHeading Size="H4" Style="margin-bottom: 16px;">
+            Manage Roles for <span style="color: #007bff;">@SelectedUser.UserName</span>
+        </RadzenHeading>
+
+        <RadzenRow>
+            <RadzenColumn Size="12" SizeMd="6" Style="margin-bottom: 16px;">
+                <RadzenDropDown Data="@Roles" @bind-Value="@SelectedRole" Placeholder="Select Role"  Style="width: 100%;" AllowClear="true" />
+            </RadzenColumn>
+
+            <RadzenColumn Size="12" SizeMd="6" Style="margin-bottom: 16px;">
+                <RadzenButton  Text="Assign Role"  Icon="check_circle" ButtonStyle="ButtonStyle.Primary" Style="width: 100%;" Click="@AssignRole" />
+            </RadzenColumn>
+        </RadzenRow>
+
+        <RadzenHeading Size="H5" Style="margin-top: 24px; margin-bottom: 12px;">
+            Current Roles
+        </RadzenHeading>
+
+        @if (UserRoles.Any())
+        {
+            <RadzenDataList Data="@UserRoles" Style="max-height: 200px; overflow-y: auto;" TItem="string">
+                <Template Context="role">
+                    <RadzenCard Style="margin-bottom: 8px; padding: 12px; background-color: #f9f9f9;">
+                        <RadzenRow>
+                            <RadzenColumn Size="10">
+                                <RadzenText TextStyle="TextStyle.Subtitle1">@role</RadzenText>
+                            </RadzenColumn>
+                            <RadzenColumn Size="2" class="rz-text-align-end">
+                                <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Click="@(async () => await RemoveRole(role))" Style="width: 32px; height: 32px;" Tooltip="Remove Role" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                    </RadzenCard>
+                </Template>
+            </RadzenDataList>
+        }
+        else
+        {
+            <RadzenAlert Severity="AlertSeverity.Info" Style="margin-top: 10px;">
+                No roles assigned yet.
+            </RadzenAlert>
+        }
+    </RadzenCard>
+}
+
+@code {
+    [Parameter]
+    public string? UserId { get; set; }
+    private UserDto? SelectedUser;
+    private string? SelectedRole;
+    private List<string> UserRoles = new();
+    private List<string> Roles = new();
+    public List<UserDto>? users { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Roles = await AdminService.GetRolesAsync();
+        users = await AdminService.GetUsersAsync();
+        if (!string.IsNullOrEmpty(UserId))
+        {
+            SelectedUser = users.FirstOrDefault(u => u.Id == UserId);
+        }
+        if (SelectedUser != null && SelectedUser.Id != null)
+        {
+            UserRoles = await AdminService.GetUserRolesAsync(SelectedUser.Id);
+        }
+    }
+    private async Task AssignRole()
+    {
+        if (SelectedUser == null || string.IsNullOrEmpty(SelectedRole) || SelectedUser.Id == null)
+        {
+            return;
+        }
+        else
+        {
+            await AdminService.AssignRoleAsync(SelectedUser.Id, SelectedRole);
+            UserRoles = await AdminService.GetUserRolesAsync(SelectedUser.Id);
+        }
+    }
+
+    private async Task RemoveRole(string role)
+    {
+        if (SelectedUser == null)
+        {
+            return;
+        }
+        else
+        {
+            await AdminService.RemoveRoleAsync(SelectedUser.Id, role);
+            UserRoles = await AdminService.GetUserRolesAsync(SelectedUser.Id);
+        }
+    }
+}
