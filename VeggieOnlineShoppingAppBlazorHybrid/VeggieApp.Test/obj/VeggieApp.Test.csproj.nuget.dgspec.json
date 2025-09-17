@@ -1,0 +1,625 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Test\\VeggieApp.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj",
+        "projectName": "RazorClassLibrary.SharedComponents",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Forms": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[7.3.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj",
+        "projectName": "VeggieApp.DataSource",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj",
+        "projectName": "VeggieApp.Model",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\VeggieApp.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\VeggieApp.Server.csproj",
+        "projectName": "VeggieApp.Server",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\VeggieApp.Server.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Test\\VeggieApp.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Test\\VeggieApp.Test.csproj",
+        "projectName": "VeggieApp.Test",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Test\\VeggieApp.Test.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.DataSource\\VeggieApp.DataSource.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Model\\VeggieApp.Model.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\VeggieApp.Server.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Server\\VeggieApp.Server.csproj"
+              },
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\VeggieApp.WebNew.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\VeggieApp.WebNew.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Faker.Net": {
+              "target": "Package",
+              "version": "[2.0.163, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\VeggieApp.WebNew.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\VeggieApp.WebNew.csproj",
+        "projectName": "VeggieApp.WebNew",
+        "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\VeggieApp.WebNew.csproj",
+        "packagesPath": "C:\\Users\\startbit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.WebNew\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\startbit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Anil P\\JDMS CORE\\Test\\JDMSWeb\\ComponentSpaceLicensed": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj": {
+                "projectPath": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\RazorClassLibrary.SharedComponents.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.AspNetCore.Components.Forms": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.8, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[7.3.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.19, 8.0.19]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
