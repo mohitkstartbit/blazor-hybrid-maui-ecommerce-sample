@@ -8,6 +8,7 @@ using VeggieApp.DataSource.Data;
 using VeggieApp.Model.Model;
 using VeggieApp.Model.Model.Cart;
 using VeggieApp.Model.Model.Product;
+using static System.Net.WebRequestMethods;
 
 namespace VeggieApp.DataSource.Service.ProductService
 {
@@ -28,14 +29,27 @@ namespace VeggieApp.DataSource.Service.ProductService
             try
             {
                 var response = await _Client.GetFromJsonAsync<IEnumerable<Product>>("api/Product/GetProducts");
-                var hello =
-                    "";
+               
                 return response;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return new List<Product>();
+            }
+        }
+        public async Task<IEnumerable<Categories>> GetAllCategories()
+        {
+            try
+            {
+                var response = await _Client.GetFromJsonAsync<IEnumerable<Categories>>("api/Product/GetAllCategories");
+               
+                return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return new List<Categories>();
             }
         }
 
@@ -122,7 +136,34 @@ namespace VeggieApp.DataSource.Service.ProductService
             ProductStore.CartNewList.RemoveAll(s => s.UserId == userId);
         }
 
+        //Create Product
+        public async Task<Result> CreateProduct(Product product)
+        {
+            var response = await _Client.PostAsJsonAsync<Product>("api/Product/CreateProduct", product);
 
-
+            if (response.IsSuccessStatusCode)
+            {
+                return new Result { Successful = true };
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                return new Result { Successful = false, Error = error };
+            }
+        }
+        // Update Product
+        public async Task<Result> UpdateProduct(Product product)
+        {
+            var response = await _Client.PutAsJsonAsync($"api/Product/UpdateProduct/{product.product_id}", product);
+            if (response.IsSuccessStatusCode)
+            {
+                return new Result { Successful = true };
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                return new Result { Successful = false, Error = error };
+            }
+        }
     }
 }

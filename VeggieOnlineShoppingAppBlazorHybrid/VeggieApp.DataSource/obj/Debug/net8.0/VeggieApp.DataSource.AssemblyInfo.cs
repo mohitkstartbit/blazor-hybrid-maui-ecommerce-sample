@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VeggieApp.DataSource")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce45d771621cca7ddb308eaa1329e1f0277e558")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e3d3296e88a3e2e93879934ac434d9b9811aa6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("VeggieApp.DataSource")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VeggieApp.DataSource")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,16 @@
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\bin\Release\net8.0\VeggieApp.DataSource.deps.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\bin\Release\net8.0\VeggieApp.DataSource.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\bin\Release\net8.0\VeggieApp.DataSource.pdb
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\bin\Release\net8.0\VeggieApp.Model.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\bin\Release\net8.0\VeggieApp.Model.pdb
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.csproj.AssemblyReference.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.AssemblyInfoInputs.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.AssemblyInfo.cs
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.csproj.CoreCompileInputs.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.sourcelink.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieAp.8357058C.Up2Date
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\refint\VeggieApp.DataSource.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\VeggieApp.DataSource.pdb
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.DataSource\obj\Release\net8.0\ref\VeggieApp.DataSource.dll
