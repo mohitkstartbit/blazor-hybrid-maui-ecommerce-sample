@@ -24,32 +24,69 @@ namespace VeggieApp.Server.Controllers
             _userManager = userManager;
         }
 
+        //[HttpPost]
+        //public async Task<IActionResult> Login([FromBody] LogInModel login)
+        //{
+        //    var result = await _signInManager.PasswordSignInAsync(login.Email!, login.Password!, false, false);
+
+        //    if (!result.Succeeded) return BadRequest(new LogInResult { Successful = false, Error = "Username and password are not match " });
+        //    var user = await _userManager.GetUserAsync(User);
+
+        //    var claims = new[]
+        //    {
+        //        new Claim(ClaimTypes.Name,login.Email!),
+        //        new Claim(ClaimTypes.NameIdentifier,user.Id)
+        //    };
+
+        //    var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));
+        //    var creads = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256);
+        //    var expiry = DateTime.Now.AddDays(Convert.ToInt32(_configuration["JwtExpiryInDays"]));
+
+        //    var token = new JwtSecurityToken(
+        //            _configuration["JwtIssuer"],
+        //            _configuration["JwtAudience"],
+        //            claims,
+        //            expires: expiry,
+        //            signingCredentials: creads);
+
+        //    return Ok(new LogInResult { Successful = true, Token = new JwtSecurityTokenHandler().WriteToken(token) });
+        //}
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LogInModel login)
+        public async Task<IActionResult> Login([FromBody] LogInModel model)
         {
-            var result = await _signInManager.PasswordSignInAsync(login.Email!, login.Password!, false, false);
-            
-            if (!result.Succeeded) return BadRequest(new LogInResult { Successful = false, Error = "Username and password are not match " });
-            var user = await _userManager.GetUserAsync(User);
-            
-            var claims = new[]
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password))
+                return Unauthorized();
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name,login.Email!),
-                new Claim(ClaimTypes.NameIdentifier,user.Id)
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.Email!)
             };
 
-            var Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]!));
-            var creads = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256);
-            var expiry = DateTime.Now.AddDays(Convert.ToInt32(_configuration["JwtExpiryInDays"]));
+            // Add roles as claims
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSecurityKey"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                    _configuration["JwtIssuer"],
-                    _configuration["JwtAudience"],
-                    claims,
-                    expires: expiry,
-                    signingCredentials: creads);
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(30),
+                signingCredentials: creds);
 
-            return Ok(new LogInResult { Successful = true, Token = new JwtSecurityTokenHandler().WriteToken(token) });
+            return Ok(new
+            {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                expiration = token.ValidTo
+            });
         }
+
     }
 }

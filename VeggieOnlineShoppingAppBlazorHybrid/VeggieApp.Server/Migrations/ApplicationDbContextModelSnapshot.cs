@@ -167,12 +167,10 @@ namespace VeggieApp.Server.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -209,12 +207,10 @@ namespace VeggieApp.Server.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -240,6 +236,29 @@ namespace VeggieApp.Server.Migrations
                     b.HasKey("CustomerId");
 
                     b.ToTable("Customer");
+                });
+
+            modelBuilder.Entity("VeggieApp.Model.Model.Cart.ProductState", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsAdded")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductStates");
                 });
 
             modelBuilder.Entity("VeggieApp.Model.Model.Order", b =>
@@ -296,6 +315,31 @@ namespace VeggieApp.Server.Migrations
                     b.ToTable("OrderItems");
                 });
 
+            modelBuilder.Entity("VeggieApp.Model.Model.Product.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("VeggieApp.Model.Model.Product.Categories", b =>
                 {
                     b.Property<int>("category_id")
@@ -321,11 +365,23 @@ namespace VeggieApp.Server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("product_id"));
 
+                    b.Property<bool>("IsAddedToCart")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("int");
+
                     b.Property<int>("category_id")
                         .HasColumnType("int");
 
                     b.Property<int>("list_price")
                         .HasColumnType("int");
+
+                    b.Property<int?>("marketPrice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("productDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("product_image")
                         .IsRequired()
@@ -334,6 +390,9 @@ namespace VeggieApp.Server.Migrations
                     b.Property<string>("product_name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("rating")
+                        .HasColumnType("int");
 
                     b.HasKey("product_id");
 
@@ -421,6 +480,17 @@ namespace VeggieApp.Server.Migrations
                     b.Navigation("Orders");
 
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("VeggieApp.Model.Model.Product.CartItem", b =>
+                {
+                    b.HasOne("VeggieApp.Model.Model.Product.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("VeggieApp.Model.Model.Product.Product", b =>

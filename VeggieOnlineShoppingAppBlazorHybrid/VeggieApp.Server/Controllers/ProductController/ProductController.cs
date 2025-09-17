@@ -38,6 +38,24 @@ namespace VeggieApp.Server.Controllers.ProductController
                 return Ok(ex.Message);
             }
         }
+        //  --------   Api for Fet All Categories  -------------------------
+        [HttpGet("GetAllCategories")]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            try
+            {
+                if (_context.Categories == null)
+                {
+                    return NotFound();
+                }
+                var listofcategories = await _context.Categories.ToListAsync();
+                return Ok(listofcategories);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex.Message);
+            }
+        }
 
         // ---- Api for Get Product Details --------
         [HttpGet("ProductDetails/{Id:int}")]
@@ -102,6 +120,43 @@ namespace VeggieApp.Server.Controllers.ProductController
             }
         }
 
-       
+        //Create New Product
+        [HttpPost("CreateProduct")]
+        public async Task<IActionResult> CreateProduct([FromBody] Product product)
+        {
+            try
+            {
+                if (product == null)
+                {
+                    return BadRequest();
+                }
+                _context.Products.Add(product);
+                await _context.SaveChangesAsync();
+                return Ok(product);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        //Update Product
+        [HttpPut("UpdateProduct/{Id:int}")]
+        public async Task<IActionResult> UpdateProduct(int Id, [FromBody] Product product)
+        {
+            try
+            {
+                if (Id != product.product_id)
+                {
+                    return BadRequest();
+                }
+                _context.Entry(product).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+                return Ok(product);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

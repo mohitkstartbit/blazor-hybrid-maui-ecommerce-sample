@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VeggieApp.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce45d771621cca7ddb308eaa1329e1f0277e558")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42b68df712915648c6fa8117c707bf9117832021")]
 [assembly: System.Reflection.AssemblyProductAttribute("VeggieApp.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VeggieApp.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

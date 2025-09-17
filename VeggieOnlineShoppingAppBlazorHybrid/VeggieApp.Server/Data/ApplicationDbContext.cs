@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using VeggieApp.Model.Model;
 using VeggieApp.Model.Model.Authentication;
+using VeggieApp.Model.Model.Cart;
 using VeggieApp.Model.Model.Product;
 
 namespace VeggieApp.Server.Data
@@ -16,5 +17,7 @@ namespace VeggieApp.Server.Data
             public DbSet<Order> Orders { get; set; }
             public DbSet<OrderItem> OrderItems { get; set; }
             public DbSet<Customer> Customer { get; set; }
+            public DbSet<CartItem> CartItems { get; set; }
+            public DbSet<ProductState> ProductStates { get; set; }
     }
 }
