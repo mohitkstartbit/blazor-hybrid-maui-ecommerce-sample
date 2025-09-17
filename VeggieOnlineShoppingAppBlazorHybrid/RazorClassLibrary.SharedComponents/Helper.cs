@@ -10,8 +10,8 @@ namespace RazorClassLibrary.SharedComponents
     {
         public static string GetImage(string url)
         {
-            var newFile = $"https://veggie-image.static.domains/Images/{url}";
-            return newFile;
+            //var newFile = $"https://veggie-image.static.domains/Images/{url}";
+            return url;
         }
     }
 }

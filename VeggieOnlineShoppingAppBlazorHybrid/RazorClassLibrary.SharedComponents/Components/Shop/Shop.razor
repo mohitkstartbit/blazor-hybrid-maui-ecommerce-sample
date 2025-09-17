@@ -1,24 +1,143 @@
 ﻿@using Microsoft.AspNetCore.Components.Routing;
 @inject AuthenticationStateProvider _authProvider;
 @inject NavigationManager _navmanager
+<style>
+    .product-card {
+        padding: 0.5rem;
+    }
+    .product-card-inner {
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        font-size: 14px;
+    }
+    .image-card img {
+        max-height: 100px;
+        object-fit: contain;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    .price-info {
+        display: flex;
+        gap: 8px; /* space between spans */
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .current-price {
+        color: #245b1d;
+        font-size: 20px;
+    }
+    .mrp {
+        text-decoration: line-through;
+        color: #888;
+    }
+    .save {
+        color: #d32f2f;
+        font-weight: 600;
+        font-size:10px;
+    }
+    .pack-info {
+        color: #555;
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+    .product-name {
+        font-weight: bolder;
+        color: #333;
+        font-size: 16px;
+        overflow: hidden;
+    }
+    .rating {
+        font-size: 12px;
+        color: #ff9800;
+    }
+    .add-cart-button {
+        background-color: #245b1d;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 6px 12px;
+        border: none;
+    }
+
+    .remove-button {
+        background-color: #dc3545;
+        color: white;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 6px 12px;
+        border: none;
+    }
+    
+        .add-cart-button[disabled] {
+            background-color: #aaa;
+            border-color: #aaa;
+            color: white;
+            cursor: not-allowed;
+        }
+</style>
 <main class="container">
     <div class="row g-5">
 
         @foreach (var Item in Productlist)
         {
-            <div class="col-md-3 col-sm-6 product-card">
-                <div class="card hover-shadow product-card-inner">
+            <div class="col-md-2 col-sm-4 col-6 product-card">
+                <div class="card product-card-inner">
+                    <!-- Image -->
                     <div class="image-card">
-                        <img class="card-img-top" src="@Helper.GetImage(Item.product_image)" alt="@Helper.GetImage(Item.product_image)">
+                        <img src="@Helper.GetImage(Item.product_image)" @onclick="@(() => UpdateProduct(Item.product_id))" alt="@Item.product_name" class="card-img-top" />
                     </div>
-                    <div class="card-body text-center">
-                        <p class="card-text" style="font-size:20px;color:#245b1d;">@Item.product_name</p>
-                        <p class="card-text">$@Item.list_price</p>
+                    <div class="card-body text-left p-2">
+                        <!-- Product Name -->
+                        <div class="product-name">
+                            @Item.product_name
+                        </div>
+                        <!-- Product Description -->
+                        <div class="pack-info">
+                            @Item.productDescription
+                        </div>
+                        <!-- Rating -->
+                        <div class="rating">
+                            ⭐ @Item.rating
+                        </div>
+                        <!-- Price Section -->
+                        <div class="price-info">
+                            <span class="current-price">₹@Item.list_price</span>
+                            <span class="mrp">₹@Item.marketPrice</span>
+                            <span class="save">SAVE ₹@(Item.marketPrice - Item.list_price)</span>
+                        </div>
+                        <!-- Add to Cart Button -->
+                        <!-- Add to Cart Button -->
+                      @*   @if (Item.IsAddedToCart)
+                        {
+                            <button class="btn btn-sm remove-button"
+                                    @onclick="args => DecreaseQuantity(Item.product_id)">
+                                Remove Item
+                            </button>
+                        }
+                        else
+                        {
+                        <button class="btn btn-sm add-cart-button"
+                                    @onclick="args => AddproductNew(Item.product_id)">
+                            Add To Cart
+                        </button>
+                        } *@
+                        @if (GetProductState(Item.product_id))
+                        {
+                            <button class="btn btn-sm remove-button"
+                                    @onclick="args => RemoveProductNew(Item.product_id)">
+                                Remove Item
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-sm add-cart-button"
+                                    @onclick="args => AddproductNew(Item.product_id)">
+                                Add To Cart
+                            </button>
+                        }
                     </div>
                 </div>
-                <NavLink href="cart">
-                    <button class="btn add-cart-button" @onclick="args=>Addproduct(Item.product_id)"> Add To Cart</button>
-                </NavLink>
             </div>
         }
     </div>
@@ -27,13 +146,18 @@
 @code {
     public string userId = "";
     public List<Product> Productlist = new();
+    private Dictionary<int, bool> productStates = new();
+    public ProductViewModel productViewModel = new();
     [Inject]
     public IProductService ProductService { get; set; }
+    [Inject]
+    public ICartService CartService { get; set; }
     //  [Inject]
     // ProductStore _productStore { get; set; }
     protected override async Task OnInitializedAsync()
     {
         var response = await ProductService.GetAll();
+        //Productlist = response.ToList();
         Productlist = response.ToList();
         var asp = await _authProvider.GetAuthenticationStateAsync();
         if (asp.User.Identity.IsAuthenticated)
@@ -42,9 +166,29 @@
             if (id!=null)
             {
                 userId = id.Value;
+                foreach (var product in Productlist)
+                {
+
+                    var item = await CartService.GetUserProductStates(product.product_id, userId);
+                    if (item != null && item.ContainsKey(product.product_id))
+                    {
+                        productStates[product.product_id] = item[product.product_id];
+                    }
+
+                    var isInCart = ProductStore.CartNewList.Any(c => c.Productid == product.product_id && c.UserId == userId);
+                    product.IsAddedToCart = isInCart;
+                }
             }
         }
+        var prod = productStates;
     }
+
+    private bool GetProductState(int productId)
+    {
+        return productStates.TryGetValue(productId, out var isAdded) && isAdded;
+    }
+
+
     public async Task Addproduct(int id)
     {
         var product = Productlist.FirstOrDefault(s => s.product_id == id);
@@ -70,46 +214,48 @@
                         UserId = userId
                     });
             }
+            product.IsAddedToCart = true;
+            StateHasChanged();
         }
         else
         {
-            //Show the message
             _navmanager.NavigateTo("login");
-
         }
-        // foreach (var product in Productlist)
-        // {
-        //     if (product.product_id == id)
-        //     {
-        //         foreach (var cartitem in _productStore.CartNewList)
-        //         {
-        //             if (cartitem.Productid == product.product_id)
-        //             {
-        //                 cartitem.Quantity += 1;
-        //                 cartitem.TotalPrice = cartitem.Quantity * cartitem.ListPrice;
-        //                // _productStore.SetValue();
-        //                 return;
-        //             }
-        //         }
 
-        //         ProductService.addcart(new()
-        //             {
-        //                 Productid = product.product_id,
-        //                 ProductName = product.product_name,
-        //                 ProductImage = product.product_image,
-        //                 ListPrice = product.list_price,
-        //                 TotalPrice = product.list_price,
-        //                 Quantity = 1,
-        //                 UserId = userId
-        //             });
-        //         // _productStore.SetValue();
-        //         return;
-        //     }
-        // }
+    }
+    public async Task AddproductNew(int id)
+    {
+        var asp = await _authProvider.GetAuthenticationStateAsync();
+        var product = Productlist.FirstOrDefault(s => s.product_id == id);
+        if (product != null && asp.User.Identity.IsAuthenticated)
+        {
+            var result = await CartService.AddToCart(id, userId);
+            productStates[id] = true;
+        }
+        else
+        {
+            _navmanager.NavigateTo("login");
+        }
+        StateHasChanged();
+    }
+    public void UpdateProduct(int ProductId)
+    {
+        _navmanager.NavigateTo($"/updateproduct/{ProductId}");
     }
 
-   
-
-
+    public async Task RemoveProductNew(int id)
+    {
+        var asp = await _authProvider.GetAuthenticationStateAsync();
+        var product = Productlist.FirstOrDefault(s => s.product_id == id);
+        if (product != null && asp.User.Identity.IsAuthenticated)
+        {
+            var result = await CartService.RemoveCartItem(id,userId);
+            productStates[id] = false;
+        }
+        else
+        {
+            _navmanager.NavigateTo("login");
+        }
+    }
 }
 

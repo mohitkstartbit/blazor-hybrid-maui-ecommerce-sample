@@ -2,91 +2,92 @@
 @inject ProductStore _productStore
 @inject AuthenticationStateProvider _authProvider;
 @inject NavigationManager _navigationManager
-<div class="row">
-    <div class="col-md-12 text-start my-Cart">
-        <h1> My Cart</h1>
-    </div>
-</div>
 
-@* -------- If cart is empty -----*@
+<style>
+    .cart-product-img {
+        max-width: 70px;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    .quantity-controls button {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .cart-item {
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #f9f9f9;
+        border-radius: 6px;
+    }
+
+        .cart-item h6 {
+            font-size: 1rem;
+        }
+
+        .cart-item small {
+            font-size: 0.85rem;
+        }
+
+</style>
+
 @if (cartlist.Count > 0)
 {
-
     foreach (var item in cartlist)
     {
-        <div class="row List-box">
-            <div class="col-md-4 text-center">
-                <img class="card-img-top" src="@Helper.GetImage(item.ProductImage)" alt="VegetableImages">
-            </div>
-            <div class="col-md-8"></div>
-
-            <div class="col-md-4 text-center Cart-product">
-                <p>@item.ProductName</p>
-            </div>
-            <div class="col-md-8">
+        <div class="cart-item row align-items-center mb-3 p-2 shadow-sm">
+            <!-- Product Image -->
+            <div class="col-3 col-md-2 text-center">
+                <img src="@Helper.GetImage(item.ProductImage)" alt="@item.ProductName" class="img-fluid rounded cart-product-img" />
             </div>
 
-
-            <div class="col-md-4 text-center">
-                @*  <input value="@item.Quantity" readonly style="text-align:center;border:none;"/> *@
-                <p>@item.Quantity</p>
+            <!-- Product Details -->
+            <div class="col-6 col-md-7">
+                <h6 class="mb-1">@item.ProductName</h6>
+                <small>Price: $@item.ListPrice</small><br />
+                @* <small>Total: <strong>$@item.TotalPrice</strong></small> *@
+                <small>Total: <strong>$@(item.ListPrice * item.Quantity)</strong></small>
             </div>
-            <div class="col-md-8"></div>
 
-
-            <div class="col-md-4 text-center">
-                <div style="display:inline-flex;">
-                    <button @onclick="args=>DecreaseQuantity(item.Productid)" class="decrease-button">
-                        -
-                    </button>&nbsp;&nbsp;&nbsp;
-                    <button class="increase-button" @onclick="args=>IncreaseQuantity(item.Productid)"> + </button>
-
+            <!-- Quantity Control -->
+            <div class="col-3 col-md-3 text-center">
+                <div class="quantity-controls d-flex justify-content-center align-items-center">
+                    <button @onclick="args => DecreaseQuantity(item.Productid)" class="btn btn-outline-secondary btn-sm">-</button>
+                    <span class="mx-2 small">@item.Quantity</span>
+                    <button @onclick="args => IncreaseQuantity(item.Productid)" class="btn btn-outline-secondary btn-sm">+</button>
                 </div>
             </div>
-            <div class="col-md-8"></div>
-
-
-            <div class="col-md-4 text-center">
-                <p class="total-price">Price :$@item.TotalPrice</p>
-            </div>
-            <div class="col-md-8">
-            </div>
         </div>
-
     }
-    <div class="row m-5">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4 col-sm-12"></div>
-                <div class="col-md-4 col-sm-12 text-center place-order-box">
 
-                    <p>Total Payable Ammount: &nbsp; &nbsp;<span>$@TotalPayableAmmount </span></p>
-                    <button class="btn" @onclick="PlaceOrder">Place Order</button>
-                </div>
-                <div class="col-md-4 col-sm-12"></div>
-            </div>
-
+    <!-- Total Payable and Place Order Button -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h6>Total Payable Amount: <span class="text-success">$@TotalPayableAmmount</span></h6>
+            <button class="btn btn-sm btn-primary mt-2" @onclick="PlaceOrder">Place Order</button>
         </div>
-
     </div>
 }
 else
 {
+    <!-- Empty Cart Message -->
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+        <RadzenCard Style="text-align: center; padding: 2rem; max-width: 400px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <RadzenIcon Icon="remove_shopping_cart" Style="font-size: 48px; color: #dc3545; margin-bottom: 1rem;" />
 
-    <div class="row">
-        <div class="col-md-12 text-center Item-not-available">
-            <p><span>Oops!</span><br />There is no item. <br />Please add item first. </p>
-            <NavLink href="/">
-                <button class="mt-5 mb-5">Continue Shopping</button>
-            </NavLink>
-        </div>
+            <h4 style="margin-bottom: 0.5rem;">Your cart is empty</h4>
+            <p style="color: gray;">Oops! Looks like you haven’t added anything yet.</p>
+            <RadzenButton Text="Continue Shopping" Icon="storefront" ButtonStyle="ButtonStyle.Primary" Style="margin-top: 1rem;" Click="@GotoHome" />
+        </RadzenCard>
     </div>
 }
 
 
 @code {
-    @* public int Quantity { get; set; } = 1; *@
     public int TotalPayableAmmount { get; set; } = 0;
+    public int TotalPrice { get; set; } = 0;
     public List<Product> CartItems;
     public List<CartViewModel> cartlist = new List<CartViewModel>();
     public List<OrderViewModel> OrderedItems;
@@ -94,6 +95,8 @@ else
     public IProductService productService { get; set; }
     [Inject]
     public IOrderService _orderService { get; set; }
+    [Inject]
+    public ICartService cartService { get; set; }
     string userId = "";
     protected override async void OnInitialized()
     {
@@ -107,25 +110,39 @@ else
             }
         }
         var data = productService.GetCart().Where(s => s.UserId == userId).ToList();
-        cartlist = data;
+        //  cartlist = data;
 
-        CountTotalAmmount(false);
-
-
-
+        //var ddf = await cartService.GetCartItems(userId);
+        var dddf = await cartService.GetAllCartItems(userId);
+        cartlist = dddf;
+        @if(cartlist.Count() > 0)
+        {
+            CountTotalAmmount(true);
+        }
+        else
+        {
+            CountTotalAmmount(false);
+        }
         @*  _productStore.CartNewList = productService.GetCart().ToList();*@
+    }
+    private async Task GotoHome()
+    {
+        _navigationManager.NavigateTo("/");
     }
     public void CountTotalAmmount(bool status)
     {
         TotalPayableAmmount = 0;
-        TotalPayableAmmount = cartlist.Sum(s => s.TotalPrice);
+        TotalPayableAmmount = cartlist.Sum(s => s.ListPrice * s.Quantity);
         if (status)
         {
             OnInitialized();
         }
         StateHasChanged();
     }
-
+    public void calculateTotalPrice(int price, int quantity)
+    {
+        TotalPrice = price * quantity;
+    }
     public void PlaceOrder()
     {
         var items = new List<OrderItem>();
@@ -150,20 +167,23 @@ else
             });
 
         productService.ClearCart(userId);
-        
+
         _navigationManager.NavigateTo("OrderCreatedSuccesfullPage");
     }
 
     public void DecreaseQuantity(int ProductId)
     {
-        productService.DecreaseQuantity(ProductId, userId);
-
+        //productService.DecreaseQuantity(ProductId, userId);
+       // cartService.DecreaseQuantity(ProductId, userId);
+        cartService.RemoveCartItem(ProductId, userId);
         CountTotalAmmount(true);
     }
 
     public void IncreaseQuantity(int ProductId)
     {
-        productService.IncreaseQuantity(ProductId, userId);
+        //productService.IncreaseQuantity(ProductId, userId);
+       //cartService.IncreaseQuantity(ProductId, userId);
+        cartService.AddToCart(ProductId, userId);
         CountTotalAmmount(false);
     }
 }

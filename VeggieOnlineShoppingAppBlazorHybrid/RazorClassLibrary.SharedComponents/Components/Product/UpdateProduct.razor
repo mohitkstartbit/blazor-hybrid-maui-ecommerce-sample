@@ -1,0 +1,129 @@
+﻿@inject NavigationManager NavigationManager;
+
+<RadzenTemplateForm TItem="Product" Data=@Product Submit=@UpdateExistProduct InvalidSubmit=@OnInvalidSubmit>
+    <RadzenRow Gap="2rem" class="rz-p-0 rz-p-lg-4">
+        <RadzenColumn Size="12" SizeMD="6">
+            <RadzenStack>
+                <!-- Product Name -->
+                <RadzenFormField Text="Product Name">
+                    <ChildContent>
+                        <RadzenTextBox Name="ProductName" @bind-Value=@Product.product_name Style="width: 100%;" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductName" Text="Please fill product name." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Product Image URL -->
+                <RadzenFormField Text="Product Image Url">
+                    <ChildContent>
+                        <RadzenTextBox Name="ProductImageUrl" @bind-Value=@Product.product_image Style="width: 100%;" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductImageUrl" Text="Please enter Image url." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Product Catagory -->
+                <RadzenFormField Text="Select Product Catagory">
+                    <ChildContent>
+                        <RadzenDropDown @bind-Value="Product.category_id" Placeholder="Select" Data="@categoriesList" Style="width: 100%;" TextProperty="category_name" ValueProperty="category_id" Name="category_name">
+                        </RadzenDropDown>
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="category_name" Text="Please enter Image url." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Product Seeling Price -->
+                <RadzenFormField Text="Product Selling Price">
+                    <ChildContent>
+                        <RadzenNumeric Name="ProductPrice" @bind-Value=@Product.list_price InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "enter value" } })" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductPrice" Text="Please define product price." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Product Market Price -->
+                <RadzenFormField Text="Product Market Price">
+                    <ChildContent>
+                        <RadzenNumeric Name="ProductMarketPrice" @bind-Value=@Product.marketPrice InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "enter value" } })" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductMarketPrice" Text="Please enter market price." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Quantity/Stock Price -->
+                <RadzenFormField Text="Product Quantity">
+                    <ChildContent>
+                        <RadzenNumeric Name="ProductQuantity" @bind-Value=@Product.Quantity InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "enter value" } })" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductQuantity" Text="Please enter product current stock." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Product Description -->
+                <RadzenFormField Text="Product Description">
+                    <ChildContent>
+                        <RadzenTextArea Name="ProductDescription" @bind-Value="Product.productDescription" Style="width: 100%" aria-label="TextArea" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductDescription" Text="Please enter product Description." />
+                    </Helper>
+                </RadzenFormField>
+                <!-- Rating -->
+                <RadzenFormField Text="Product Rating">
+                    <ChildContent>
+                        <RadzenNumeric Name="ProductRating" @bind-Value=@Product.rating InputAttributes="@(new Dictionary<string, object>() { { "aria-label", "enter value" } })" />
+                    </ChildContent>
+                    <Helper>
+                        <RadzenRequiredValidator Component="ProductRating" Text="Please enter product rating." />
+                    </Helper>
+                </RadzenFormField>
+            </RadzenStack>
+        </RadzenColumn>
+    </RadzenRow>
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" Gap="1rem" class="rz-mt-8 rz-mb-4">
+        <RadzenButton ButtonType="ButtonType.Submit" Size="ButtonSize.Large" Icon="save" Text="Save" />
+    </RadzenStack>
+</RadzenTemplateForm>
+
+@code {
+    public Product Product = new Product();
+    [Parameter]
+    public int ProductId { get; set; }
+    private bool ShowErrors;
+    private string Error = "";
+    public List<Categories> categoriesList = new List<Categories>();
+    [Inject]
+    public IProductService ProductService { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await ProductService.GetAllCategories();
+        categoriesList = response.ToList();
+
+        var products = await ProductService.GetAll();
+        Product = products.FirstOrDefault(p => p.product_id == ProductId) ?? new Product();
+
+    }
+    private async Task UpdateExistProduct()
+    {
+        ShowErrors = false;
+        var result = await ProductService.UpdateProduct(Product);
+
+        if (result.Successful)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+        else
+        {
+            Error = result.Error!;
+            ShowErrors = true;
+        }
+    }
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        // Handle invalid submit
+    }
+    void OnChange(string value, string name)
+    {
+
+    }
+}

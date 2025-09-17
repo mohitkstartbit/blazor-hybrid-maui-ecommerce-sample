@@ -1,0 +1,69 @@
+﻿@using System.Text.RegularExpressions;
+@inject IAdminService AdminService
+@inject NavigationManager _navigationManager
+<style>
+</style>
+<h3>Manage Users & Roles</h3>
+
+<RadzenTable GridLines="@gridLines" AllowAlternatingRows="@allowAlternatingRows">
+    <RadzenTableHeader>
+        <RadzenTableHeaderRow>
+            <RadzenTableHeaderCell>
+                UserName
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Email
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Edit
+            </RadzenTableHeaderCell>
+        </RadzenTableHeaderRow>
+    </RadzenTableHeader>
+    <RadzenTableBody>
+            @foreach(var user in Users)
+            {
+            <RadzenTableRow>
+                    <RadzenTableCell>
+                    @GetUserInitials(user.UserName)
+                    </RadzenTableCell>
+                    <RadzenTableCell>
+                        @user.Email
+                    </RadzenTableCell>
+                    <RadzenTableCell>
+                        <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Small" Click="@(() => OnUserSelected(user.Id))" />
+                    </RadzenTableCell>
+            
+            </RadzenTableRow>
+            }
+    </RadzenTableBody>
+</RadzenTable>
+
+@code {
+    private List<UserDto> Users = new();
+    private List<string> Roles = new();
+    IEnumerable<UserDto>? users;
+    
+    Radzen.DataGridGridLines gridLines = Radzen.DataGridGridLines.Default;
+    bool allowAlternatingRows = true;
+    public string GetUserInitials(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "?";
+        var rawName = name.Split('@')[0];
+        var cleaned = Regex.Replace(rawName, @"[\d._]", " ");
+        var parts = cleaned.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(p => char.ToUpper(p[0]) + p.Substring(1).ToLower()).ToList();
+        return string.Join(" ", parts);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Users = await AdminService.GetUsersAsync();
+        Roles = await AdminService.GetRolesAsync();
+    }
+
+    private void OnUserSelected(string Id)
+    {
+        var userId = Id;
+        _navigationManager.NavigateTo($"/adminPage/{Id}");
+    }
+}

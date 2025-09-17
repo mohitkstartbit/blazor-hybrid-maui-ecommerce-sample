@@ -1,0 +1,91 @@
+﻿@page "/RegisterNew"
+@inject IAuthService AuthService
+@inject NavigationManager NavigationManager
+
+<style>
+
+    .rz-dialog .rz-dialog-title {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        text-align: center !important;
+        color: white;
+    }
+
+    .rz-dialog-titlebar {
+        background-color: #294a04;
+    }
+</style>
+
+<RadzenStack Gap="1rem" Orientation="Orientation.Vertical" JustifyContent="JustifyContent.SpaceBetween" Style="height: 100%;">
+    <RadzenRow>
+        <RadzenColumn Size="12" SizeMD="12" class="rz-p-4 rz-border-radius-1" Style="border: var(--rz-grid-cell-border)">
+            <RadzenTemplateForm TItem="RegisterModel" Data=@RegisterModel Submit=@HandleRegistration InvalidSubmit=@OnInvalidSubmit>
+                <h4 style="text-align: center; color: #245b1d; font-weight: 600; margin-bottom: 1rem;">
+                    Join TazaCart – Freshness Delivered Daily!
+                </h4>
+                <RadzenStack Gap="0.75rem">
+                    <!-- Email -->
+                    <RadzenFormField Text="Email">
+                        <ChildContent>
+                            <RadzenTextBox Name="Email" @bind-Value=@RegisterModel.Email Style="width: 100%;" Icon="email" />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenEmailValidator Component="Email" Text="Enter a valid email" />
+                        </Helper>
+                    </RadzenFormField>
+                    <!-- Password -->
+                    <RadzenFormField Text="Password">
+                        <ChildContent>
+                            <RadzenTextBox Name="Password" @bind-Value=@RegisterModel.Password Type="password" Style="width: 100%;" Icon="lock" />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="Password" Text="Password is required" />
+                        </Helper>
+                    </RadzenFormField>
+                    <!-- Confirm Password -->
+                    <RadzenFormField Text="Confirm Password">
+                        <ChildContent>
+                            <RadzenTextBox Name="ConfirmPassword" @bind-Value=@RegisterModel.ConfirmPassword Type="password" Style="width: 100%;" Icon="lock" />
+                        </ChildContent>
+                        <Helper>
+                            <RadzenRequiredValidator Component="ConfirmPassword" Text="Confirm Password is required" />
+                            <RadzenCompareValidator Component="ConfirmPassword" Value="@(RegisterModel.Password)" Text="Passwords do not match" />
+                        </Helper>
+                    </RadzenFormField>
+                    <!-- Register Button -->
+                    <RadzenButton ButtonType="ButtonType.Submit"
+                                  Text="Register"
+                                  Icon="person_add"
+                                  Style="width: 120px; margin: auto; background-color: #245b1d; color: white; border-radius: 6px; font-weight: 500;" />
+                </RadzenStack>
+            </RadzenTemplateForm>
+        </RadzenColumn>
+    </RadzenRow>
+</RadzenStack>
+@code {
+    private RegisterModel RegisterModel = new RegisterModel();
+    private bool ShowErrors;
+    private IEnumerable<string>? Errors;
+
+    private async Task HandleRegistration()
+    {
+        ShowErrors = false;
+
+        var result = await AuthService.Register(RegisterModel);
+        if (result.Successful)
+        {
+            NavigationManager.NavigateTo("/login");
+        }
+        else
+        {
+            Errors = result.Errors;
+            ShowErrors = true;
+        }
+    }
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        // Handle invalid submit
+    }
+}
+

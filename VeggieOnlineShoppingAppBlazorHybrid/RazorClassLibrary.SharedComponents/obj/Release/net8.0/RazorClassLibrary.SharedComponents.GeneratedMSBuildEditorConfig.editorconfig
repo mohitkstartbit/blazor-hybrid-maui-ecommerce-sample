@@ -9,47 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = RazorClassLibrary.SharedComponents
 build_property.RootNamespace = RazorClassLibrary.SharedComponents
-build_property.ProjectDir = C:\mohitk\git\blazor-hybrid-maui-ecommerce-sample\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\
+build_property.ProjectDir = C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\mohitk\git\blazor-hybrid-maui-ecommerce-sample\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents
+build_property.MSBuildProjectDirectory = C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogIn.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Admin/EditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZG1pblxFZGl0VXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/AdminComponentNew.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxBZG1pbkNvbXBvbmVudE5ldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogIn.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxMb2dJbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogOut.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogInDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxMb2dJbkRpc3BsYXkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogInNew.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxMb2dJbk5ldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogOut.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxMb2dPdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/Register.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxSZWdpc3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Order/OrderComponent.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/RegisterNew.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxSZWdpc3Rlck5ldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Order/OrderComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlclxPcmRlckNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Order/OrderSuccesful.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlclxPcmRlclN1Y2Nlc2Z1bC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Authentication/LogInDisplay.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRoZW50aWNhdGlvblxMb2dJbkRpc3BsYXkucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-9r84s6gxau
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Product/AddProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XEFkZFByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Order/OrderSuccesful.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlclxPcmRlclN1Y2Nlc2Z1bC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-xa3c0450oi
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Product/UpdateProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0XFVwZGF0ZVByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Shop/Cart.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Shop/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaG9wXENhcnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-wjkw8t426w
+build_metadata.AdditionalFiles.CssScope = 
 
-[C:/mohitk/git/blazor-hybrid-maui-ecommerce-sample/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Shop/Shop.razor]
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/Components/Shop/Shop.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaG9wXFNob3AucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-duyrnumkf5
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/startbit/source/repos/blazor-hybrid-ecommerce/VeggieOnlineShoppingAppBlazorHybrid/RazorClassLibrary.SharedComponents/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

@@ -2,7 +2,12 @@
 @inject IAuthService AuthService
 @inject NavigationManager NavigationManager
 
-
+<head>
+    <!-- Radzen CSS -->
+    <link href="_content/Radzen.Blazor/css/default.css" rel="stylesheet" />
+    <!-- Radzen JS -->
+    <script src="_content/Radzen.Blazor/radzen.js"></script>
+</head>
 <h1>Register</h1>
 
 @if (ShowErrors)
@@ -14,8 +19,48 @@
         }
     </div>
 }
+@using Radzen
+@using System.Text.Json
 
-<div class="card">
+<div class="rz-p-0 rz-p-md-12">
+    <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" class="rz-p-4 rz-mb-6 rz-border-radius-1" Style="border: var(--rz-grid-cell-border);">
+        <RadzenLabel Text="Variant:" />
+        <RadzenSelectBar @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" class="rz-display-none rz-display-xl-flex" />
+        <RadzenDropDown @bind-Value="@variant" TextProperty="Text" ValueProperty="Value" Data="@(Enum.GetValues(typeof(Variant)).Cast<Variant>().Select(t => new { Text = $"{t}", Value = t }))" class="rz-display-inline-flex rz-display-xl-none" />
+    </RadzenStack>
+    <RadzenTemplateForm TItem="RegisterModel" Data=@RegisterModel Submit=@HandleRegistration InvalidSubmit=@OnInvalidSubmit>
+        <RadzenStack Gap="1rem" class="rz-p-sm-12">
+            <RadzenFormField Text="Email" Variant="@variant">
+                <ChildContent>
+                    <RadzenTextBox Name="Email" @bind-Value=@RegisterModel.Email Style="display: block; width: 100%;" />
+                </ChildContent>
+                <Helper>
+                    <RadzenEmailValidator Component="Email" Text="Provide a valid email address" Style="position: absolute" />
+                </Helper>
+            </RadzenFormField>
+            <RadzenFormField Text="Password" Variant="@variant">
+                <ChildContent>
+                    <RadzenTextBox Name="Password" @bind-Value=@RegisterModel.Password />
+                </ChildContent>
+                <Helper>
+                    <RadzenRequiredValidator Component="Password" Text="Password is required." />
+                </Helper>
+            </RadzenFormField>
+            <RadzenFormField Text="Confirm Password" Variant="@variant">
+                <ChildContent>
+                    <RadzenTextBox Name="Confirm Password" @bind-Value=@RegisterModel.ConfirmPassword />
+                </ChildContent>
+                <Helper>
+                    <RadzenRequiredValidator Component="Confirm Password" Text="Confirm Password is required." />
+                </Helper>
+            </RadzenFormField>
+            <RadzenButton ButtonType="ButtonType.Submit" Text="Submit" ></RadzenButton>
+        </RadzenStack>
+    </RadzenTemplateForm>
+   @*  <EventConsole @ref=@console /> *@
+</div>
+
+@* <div class="card">
     <div class="card-body">
         <h5 class="card-title"> Please enter your details</h5>
         <EditForm Model="RegisterModel" OnValidSubmit="HandleRegistration">
@@ -39,7 +84,7 @@
             <button type="submit" class="btn btn-success">Submit</button>
         </EditForm>
     </div>
-</div>
+</div> *@
 
 @code {
     private RegisterModel RegisterModel = new RegisterModel();
@@ -60,5 +105,26 @@
             Errors = result.Errors;
             ShowErrors = true;
         }
+    }
+
+    Variant variant = Variant.Outlined;
+
+    class Model
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+
+    Model model = new Model();
+    // EventConsole console;
+
+    void OnSubmit(Model model)
+    {
+        // console.Log($"Submit: {JsonSerializer.Serialize(model, new JsonSerializerOptions() { WriteIndented = true })}");
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        // console.Log($"InvalidSubmit: {JsonSerializer.Serialize(args, new JsonSerializerOptions() { WriteIndented = true })}");
     }
 }

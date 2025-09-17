@@ -1,10 +1,76 @@
-﻿<AuthorizeView>
-    <Authorized>
-        @context.User.Identity!.Name!
-        <a href="logout" class="log-out">Log Out</a>
+﻿@using Microsoft.JSInterop
+@using System.Text.Json
+@using System.Text.RegularExpressions;
+
+@inject DialogService _DialogService
+@inject IJSRuntime JSRuntime
+@inject NavigationManager _navigationManager
+@inject IAuthService AuthService
+@inject AuthenticationStateProvider AuthStateProvider
+<style>
+    .user-name {
+        font-weight: 500;
+        color: #333;
+        margin-right: 0.5rem;
+    }
+
+    .log-out {
+        color: red;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+</style>
+<AuthorizeView>
+     <Authorized>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem">
+            <span class="user-name" style="color:white;">   <span style="color:cornsilk">Welcome! </span>@GetUserInitials(context.User.Identity!.Name!) </span>
+            <RadzenButton Icon="logout" ButtonStyle="ButtonStyle.Danger" Size="ButtonSize.Small" Click="Logout" Text="Logout" />
+        </RadzenStack>
     </Authorized>
     <NotAuthorized>
-        <a href="register" class="register-button">Register</a>
-        <a href="login" class="login-button" >Login</a>
+        <RadzenButton Icon="person_add" Text="Sign Up" ButtonStyle="ButtonStyle.Secondary" Click=@OpenRegisterDialog  Style="margin:6px;"/>
+        <RadzenButton Icon="lock_open" Text="Log In" ButtonStyle="ButtonStyle.Secondary" Click=@OpenLogInDialog />
     </NotAuthorized>
 </AuthorizeView>
+
+
+@code {
+    
+    public string GetUserInitials(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "?";
+        var rawName = name.Split('@')[0];
+        var cleaned = Regex.Replace(rawName, @"[\d._]", " ");
+        var parts = cleaned.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(p => char.ToUpper(p[0]) + p.Substring(1).ToLower()).ToList(); 
+        return string.Join(" ", parts);
+    }
+
+    private async Task Logout()
+    {
+        await AuthService.Logout();
+        _navigationManager.NavigateTo("/");
+    }
+
+    public async Task OpenRegisterDialog()
+    {
+        await _DialogService.OpenAsync<RegisterNew>("Sign Up", null, new DialogOptions()
+        {
+            Width = "28%", // or "40%", etc.
+            Height = "auto",
+            Resizable = false,
+            Draggable = true
+        });
+    }
+    public async Task OpenLogInDialog()
+    {
+        await _DialogService.OpenAsync<LogInNew>("Log In", null, new DialogOptions()
+        {
+            Width = "28%", // or "40%", etc.
+            Height = "auto",
+            Resizable = false,
+            Draggable = true
+        });
+    }
+}

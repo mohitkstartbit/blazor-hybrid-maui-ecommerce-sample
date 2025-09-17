@@ -1,0 +1,157 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images.zip",
+      "PackagePath": "staticwebassets\\Images.zip"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\TazaLogo.jpg",
+      "PackagePath": "staticwebassets\\Images\\TazaLogo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\almondsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\almondsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\appleimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\appleimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\applejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\applejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\apricotsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\apricotsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\bananaimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\bananaimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\banner.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\Images\\banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\beetjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\beetjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\bellpaperimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\bellpaperimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\blueberryjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\blueberryjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\brocolliimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\brocolliimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\carrotimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\carrotimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\cashewsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\cashewsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\grapejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\grapejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\greenbeansimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\greenbeansimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\hazelnutsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\hazelnutsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\kiwiimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\kiwiimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\ladyfingerimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\ladyfingerimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\lemoning.jpg",
+      "PackagePath": "staticwebassets\\Images\\lemoning.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\logoveggie.jpeg",
+      "PackagePath": "staticwebassets\\Images\\logoveggie.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\mangoimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\mangoimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\pineaapleimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\pineaapleimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\pistachiosimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\pistachiosimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\pomegranatejuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\pomegranatejuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\purplecabbage1img.jpg",
+      "PackagePath": "staticwebassets\\Images\\purplecabbage1img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\raisinsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\raisinsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\tartcherryjuiceimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\tartcherryjuiceimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\tomatoimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\tomatoimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\Images\\walnutsimg.jpg",
+      "PackagePath": "staticwebassets\\Images\\walnutsimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\blazor-hybrid-ecommerce\\VeggieOnlineShoppingAppBlazorHybrid\\RazorClassLibrary.SharedComponents\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.RazorClassLibrary.SharedComponents.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.RazorClassLibrary.SharedComponents.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.RazorClassLibrary.SharedComponents.props",
+      "PackagePath": "build\\RazorClassLibrary.SharedComponents.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RazorClassLibrary.SharedComponents.props",
+      "PackagePath": "buildMultiTargeting\\RazorClassLibrary.SharedComponents.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.RazorClassLibrary.SharedComponents.props",
+      "PackagePath": "buildTransitive\\RazorClassLibrary.SharedComponents.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <EnableDefaultScopedCssItems>false</EnableDefaultScopedCssItems>
+	  <DisableScopedCssBundling>true</DisableScopedCssBundling>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +30,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="8.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1" />
+    <PackageReference Include="Radzen.Blazor" Version="7.3.3" />
   </ItemGroup>
 
   <ItemGroup>

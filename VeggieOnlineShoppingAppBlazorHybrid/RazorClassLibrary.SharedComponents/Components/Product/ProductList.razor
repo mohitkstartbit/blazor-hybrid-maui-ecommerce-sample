@@ -1,0 +1,121 @@
+﻿@inject IProductService productService
+@inject NavigationManager _navmanager
+@inject NotificationService NotificationService
+
+<style>
+    .card-img-top{
+        height:100px;
+        width:auto;
+    }
+
+    .lessProduct {
+        color: #b30000;
+        font-weight: bold;
+    }
+
+    .availProduct {
+        color: #207520;
+        font-weight: bold;
+    }
+</style>
+<RadzenButton Text="Add Product" Icon="add_circle" Click="@addProduct" Style="margin: 10px;" />
+
+<RadzenTable GridLines="@gridLines" AllowAlternatingRows=true>
+    <RadzenTableHeader>
+        <RadzenTableHeaderRow>
+            <RadzenTableHeaderCell>
+                Product
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Name
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Catagory
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Price 
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Quantity
+            </RadzenTableHeaderCell>
+            <RadzenTableHeaderCell>
+                Edit
+            </RadzenTableHeaderCell>
+        </RadzenTableHeaderRow>
+    </RadzenTableHeader>
+    <RadzenTableBody>
+        @foreach (var product in Productlist)
+        {
+            <RadzenTableRow>
+                <RadzenTableCell>
+                    <img src="@Helper.GetImage(product.product_image)" alt="@product.product_name" class="card-img-top" />
+                </RadzenTableCell>
+                <RadzenTableCell Style="font-size: x-large;
+        font-weight: bolder;">
+                    @product.product_name
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    @GetProductCategoryNameAsync(product.category_id)
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    @product.list_price
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    @if(product.Quantity < 20)
+                    {
+                            <strong>@product.Quantity</strong>
+                    } else{
+                            @product.Quantity
+                          }
+                </RadzenTableCell>
+                <RadzenTableCell>
+                    <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Primary" Size="ButtonSize.Small" Click="@(() => UpdateProduct(product.product_id))" />
+                </RadzenTableCell>
+            </RadzenTableRow>
+        }
+    </RadzenTableBody>
+</RadzenTable>
+
+@code {
+    public List<Product> Productlist = new();
+    public List<Categories> categoriesList = new();
+    Radzen.DataGridGridLines gridLines = Radzen.DataGridGridLines.Default;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await productService.GetAll();
+        Productlist = response.ToList();
+        var categories = await productService.GetAllCategories();
+        categoriesList = categories.ToList();
+
+        // Check if any product is low in stock
+        var lowStockProducts = Productlist.Where(p => p.Quantity < 20).ToList();
+        if (lowStockProducts.Any())
+        {
+            ShowLowStockNotification(lowStockProducts.Count);
+        }
+    }
+    private  string GetProductCategoryNameAsync(int id)
+    {
+        var category = categoriesList.FirstOrDefault(c => c.category_id == id);
+        return category != null ? category.category_name : "Unknown Category";
+    }
+    public void UpdateProduct(int ProductId)
+    {
+        _navmanager.NavigateTo($"/updateproduct/{ProductId}");
+    }
+    public void addProduct()
+    {
+        _navmanager.NavigateTo("/addProduct");
+    }
+    private void ShowLowStockNotification(int count)
+    {
+        NotificationService.Notify(new NotificationMessage
+        {
+            Severity = NotificationSeverity.Error,
+            Summary = "Low Stock Warning!",
+            Detail = $"There are {count} product(s) running low on stock. Please review your inventory.",
+            Duration = 4000
+        });
+    }
+}
