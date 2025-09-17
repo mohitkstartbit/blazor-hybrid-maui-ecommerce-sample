@@ -1,0 +1,13 @@
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\bin\Release\net8.0\VeggieApp.Model.deps.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\bin\Release\net8.0\VeggieApp.Model.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\bin\Release\net8.0\VeggieApp.Model.pdb
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.csproj.AssemblyReference.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.AssemblyInfoInputs.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.AssemblyInfo.cs
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.sourcelink.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\refint\VeggieApp.Model.dll
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\VeggieApp.Model.pdb
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.Model\obj\Release\net8.0\ref\VeggieApp.Model.dll

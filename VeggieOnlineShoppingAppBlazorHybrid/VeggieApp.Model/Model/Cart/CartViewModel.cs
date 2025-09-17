@@ -15,6 +15,5 @@ namespace VeggieApp.Model.Model.Cart
         public int Quantity { get; set; }
         public int TotalPrice { get; set; }
         public string UserId { get; set; }
-
     }
 }

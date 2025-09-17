@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\VeggieApp.Hybrid.styles.css",
+      "PackagePath": "staticwebassets\\VeggieApp.Hybrid.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.VeggieApp.Hybrid.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.VeggieApp.Hybrid.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.VeggieApp.Hybrid.props",
+      "PackagePath": "build\\VeggieApp.Hybrid.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.VeggieApp.Hybrid.props",
+      "PackagePath": "buildMultiTargeting\\VeggieApp.Hybrid.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.VeggieApp.Hybrid.props",
+      "PackagePath": "buildTransitive\\VeggieApp.Hybrid.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

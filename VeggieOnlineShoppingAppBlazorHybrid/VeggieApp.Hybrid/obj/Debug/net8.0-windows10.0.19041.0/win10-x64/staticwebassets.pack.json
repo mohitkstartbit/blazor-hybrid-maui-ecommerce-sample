@@ -1,28 +1,32 @@
 {
   "Files": [
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\VeggieApp.Hybrid.styles.css",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\VeggieApp.Hybrid.styles.css",
       "PackagePath": "staticwebassets\\VeggieApp.Hybrid.styles.css"
     },
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\mohitk\\git\\blazor-hybrid-maui-ecommerce-sample\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\index.html",
+      "Id": "C:\\Users\\startbit\\source\\repos\\tazacart\\VeggieOnlineShoppingAppBlazorHybrid\\VeggieApp.Hybrid\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.VeggieApp.Hybrid.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.VeggieApp.Hybrid.Microsoft.AspNetCore.StaticWebAssets.props",
