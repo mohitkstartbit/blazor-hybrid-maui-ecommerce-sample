@@ -1,0 +1,2 @@
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.WebNew\obj\Release\net8.0\browser-wasm\PubTmp\Out\emcc-props.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\VeggieApp.WebNew\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config

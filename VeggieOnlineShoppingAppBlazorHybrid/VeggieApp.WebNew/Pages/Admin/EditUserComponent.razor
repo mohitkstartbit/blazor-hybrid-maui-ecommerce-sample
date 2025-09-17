@@ -1,0 +1,7 @@
+﻿@page "/adminPage/{Id}"
+<EditUser UserId="@Id"/>
+
+@code {
+    [Parameter]
+    public string? Id { get; set; }
+}

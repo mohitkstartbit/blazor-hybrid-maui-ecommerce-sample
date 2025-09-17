@@ -1,0 +1,10 @@
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\startbit\source\repos\blazor-hybrid-ecommerce\VeggieOnlineShoppingAppBlazorHybrid\RazorClassLibrary.SharedComponents\obj\Release\net8.0\staticwebassets.build.json
