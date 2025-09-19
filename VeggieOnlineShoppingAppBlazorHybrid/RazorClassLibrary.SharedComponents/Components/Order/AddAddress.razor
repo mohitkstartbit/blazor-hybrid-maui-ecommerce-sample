@@ -1,0 +1,86 @@
+﻿@inject NavigationManager NavigationManager
+<PageTitle>Delivery Address</PageTitle>
+
+<div class="container mt-4">
+    <h3 class="text-center mb-4">Enter Your Delivery Address</h3>
+
+    <RadzenCard Style="padding: 20px;">
+        <EditForm Model="@address" OnValidSubmit="HandleAddressSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="row"> <div class="col-12 col-md-6 mb-3">
+                    <RadzenTextBox @bind-Value="address.Name" Placeholder="Full Name" Style="width:100%;" Required="true" MaxLength="100" />
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <RadzenTextBox @bind-Value="address.Email" Placeholder="Email Address" Style="width:100%;" Required="true" MaxLength="100" Email="true" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <RadzenTextBox @bind-Value="address.Address" Placeholder="Street Address" Style="width:100%;" Required="true" MaxLength="200" />
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <RadzenTextBox @bind-Value="address.City" Placeholder="City" Style="width:100%;" Required="true" MaxLength="100" />
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <RadzenDropDown @bind-Value="address.Country" Data="@countries" TextProperty="Name" ValueProperty="Code" Placeholder="Select Country" Style="width:100%;" Required="true" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6 mb-3">
+                    <RadzenTextBox @bind-Value="address.PostalCode" Placeholder="Postal Code" Style="width:100%;" Required="true" MaxLength="10" />
+                </div>
+
+                <div class="col-12 col-md-6 mb-3">
+                    <RadzenTextBox @bind-Value="address.PhoneNumber" Placeholder="Phone Number" Style="width:100%;" Required="true"
+                                   MaxLength="15" />
+                </div>
+            </div>
+
+            <div class="text-center">
+                <RadzenButton Text="Proceed to Payment" Type="submit" Style="width:100%; background-color: #FF7043;" />
+            </div>
+        </EditForm>
+    </RadzenCard>
+</div>
+
+@code {
+    private DeliveryAddress address = new DeliveryAddress();
+    private List<Country> countries = new List<Country>
+    {
+        new Country { Name = "United States", Code = "US" },
+        new Country { Name = "Canada", Code = "CA" },
+        new Country { Name = "United Kingdom", Code = "GB" },
+        new Country { Name = "Australia", Code = "AU" },
+        // Add more countries as needed
+    };
+
+    private void HandleAddressSubmit()
+    {
+        // Save address or navigate to the next step
+        NavigationManager.NavigateTo("/payment");
+    }
+
+    public class DeliveryAddress
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public string PostalCode { get; set; }
+        public string PhoneNumber { get; set; }
+    }
+
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+}

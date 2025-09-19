@@ -1,0 +1,98 @@
+﻿@using Radzen
+@using Radzen.Blazor
+@inject NavigationManager NavigationManager
+
+<PageTitle>Payment Details</PageTitle>
+
+<div class="container mt-4">
+    <h3 class="text-center mb-4">Choose Payment Method</h3>
+
+    <RadzenCard Style="padding: 20px;">
+        <EditForm Model="@paymentDetails" OnValidSubmit="HandlePaymentSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <!-- Payment Method Selection -->
+            <div class="mb-4">
+                <RadzenRadioButtonList @bind-Value="paymentDetails.PaymentMethod" Data="@paymentOptions" Style="width: 100%;" TValue="string" Name="paymentMethod" Change="OnPaymentMethodChanged" />
+            </div>
+
+            @if (paymentDetails.PaymentMethod == "Online")
+            {
+                <!-- Online Payment Fields -->
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <RadzenTextBox @bind-Value="paymentDetails.CardNumber" Placeholder="Card Number" Style="width:100%;" Required="true" MaxLength="16" />
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <RadzenTextBox @bind-Value="paymentDetails.CardholderName" Placeholder="Cardholder Name" Style="width:100%;" Required="true" MaxLength="100" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-3">
+                        <RadzenTextBox @bind-Value="paymentDetails.ExpirationDate" Placeholder="MM/YY" Style="width:100%;" Required="true" MaxLength="5" />
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <RadzenTextBox @bind-Value="paymentDetails.CVV" Placeholder="CVV" Style="width:100%;" Required="true" MaxLength="3" />
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-3">
+                        <RadzenTextBox @bind-Value="paymentDetails.ZipCode" Placeholder="Zip Code" Style="width:100%;" Required="true" MaxLength="10" />
+                    </div>
+                </div>
+            }
+            <div class="text-center mt-4">
+                <RadzenButton Text="Proceed to Confirmation" Type="submit" Style="width:100%; background-color: #FF7043;" />
+            </div>
+        </EditForm>
+    </RadzenCard>
+</div>
+
+@code {
+    private PaymentDetails paymentDetails = new PaymentDetails
+    {
+        PaymentMethod = "COD" // Default selection
+    };
+
+    private List<string> paymentOptions = new List<string> { "COD", "Online" };
+
+    private void OnPaymentMethodChanged(object value)
+    {
+        // Clear card details if COD is selected
+        if (paymentDetails.PaymentMethod == "COD")
+        {
+            paymentDetails.CardNumber = string.Empty;
+            paymentDetails.CardholderName = string.Empty;
+            paymentDetails.ExpirationDate = string.Empty;
+            paymentDetails.CVV = string.Empty;
+            paymentDetails.ZipCode = string.Empty;
+        }
+    }
+
+    private void HandlePaymentSubmit()
+    {
+        if (paymentDetails.PaymentMethod == "COD")
+        {
+            // Skip online processing and go to confirmation
+            NavigationManager.NavigateTo("/confirmation");
+        }
+        else
+        {
+            // You would integrate Razorpay or Stripe here
+            NavigationManager.NavigateTo("/confirmation");
+        }
+    }
+
+    public class PaymentDetails
+    {
+        public string PaymentMethod { get; set; }
+        public string CardNumber { get; set; }
+        public string CardholderName { get; set; }
+        public string ExpirationDate { get; set; }
+        public string CVV { get; set; }
+        public string ZipCode { get; set; }
+    }
+}

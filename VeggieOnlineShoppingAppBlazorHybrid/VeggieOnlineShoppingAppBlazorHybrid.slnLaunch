@@ -5,10 +5,6 @@
       {
         "Path": "VeggieApp.Server\\VeggieApp.Server.csproj",
         "Action": "Start"
-      },
-      {
-        "Path": "VeggieApp.WebNew\\VeggieApp.WebNew.csproj",
-        "Action": "Start"
       }
     ]
   }

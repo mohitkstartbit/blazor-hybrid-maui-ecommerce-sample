@@ -27,7 +27,7 @@ namespace VeggieApp.Test.VeggieAppServer.Controller
             // Case 1: Products is null → NotFound
             var context1 = TestDbContextFactory.Create("Db1");
             context1.Products = null!;
-            yield return new object[] { context1, typeof(NotFoundResult), null };
+            yield return new object[] { context1, typeof(NotFoundResult), null! };
 
             // Case 2: Products returns list → Ok
             var context2 = TestDbContextFactory.Create("Db2");
@@ -63,6 +63,45 @@ namespace VeggieApp.Test.VeggieAppServer.Controller
             }
         }
 
+        public static IEnumerable<object[]> GetAllCategoriesTestData()
+        {
+            // Case 1: Products is null → NotFound
+            var context1 = TestDbContextFactory.Create("Db1");
+            context1.Products = null!;
+            yield return new object[] { context1, typeof(NotFoundResult), null! };
 
+            // Case 2: Products returns list → Ok
+            var context2 = TestDbContextFactory.Create("Db2");
+            context2.Categories.AddRange(new List<Categories>
+            {
+                new Categories {category_name = "Fruits" },
+                new Categories {category_name = "Fruits" }
+            });
+            context2.SaveChanges();
+            yield return new object[] { context2, typeof(OkObjectResult), 2 };
+
+            // Case 3: Exception thrown → Ok with error message
+            var context3 = TestDbContextFactory.Create("Db3");
+            context3.Dispose(); // Simulate exception
+            yield return new object[] { context3, typeof(OkObjectResult), "Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.\r\n          Object name: 'ApplicationDbContext'" };
+        }
+        [Theory]
+        [MemberData(nameof(GetAllCategoriesTestData))]
+        public async Task GetAllCategoriesTest(ApplicationDbContext context, Type expectedType, object expectedValue)
+        {
+            var controller = new ProductController(context);
+            var result = await controller.GetAllCategories();
+
+            Assert.IsType(expectedType, result);
+
+            if (result is OkObjectResult okResult)
+            {
+                if (expectedValue is int count)
+                {
+                    var category = Assert.IsAssignableFrom<List<Categories>>(okResult.Value);
+                    Assert.Equal(count, category.Count);
+                }
+            }
+        }
     }
 }
