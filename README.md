@@ -1,22 +1,85 @@
-# blazor-hybrid-ecommerce
-# Veggie Online Shopping App
+# 🛒 TazaCart – Veggie & Fruit Online Shopping App
 
-Introducing our cutting-edge application built with MAUI Blazor Hybrid and Blazor Web frameworks, offering unparalleled versatility and accessibility. By leveraging Microsoft's MAUI (Multi-platform App UI) technology alongside the power of Blazor, our application seamlessly runs across Android, iOS, desktop, and web browsers with a single, unified codebase.
+**TazaCart** is a modern, cross-platform eCommerce application built using **.NET MAUI Blazor Hybrid** and **Blazor WebAssembly**, offering a seamless shopping experience across Android, iOS, desktop, and web browsers—all from a single codebase.
 
-- **Cross-Platform Compatibility**: Our application is designed to run on Android, iOS, desktop, and web browsers without the need for platform-specific code modifications. This ensures a seamless user experience regardless of the device being used.
+## 🚀 Key Highlights
 
-- **Single Codebase**: With Blazor Hybrid and Blazor Web, we can write a single codebase using C# and .NET, which is then compiled to run natively on each platform. This not only streamlines development but also simplifies maintenance and updates.
+- **🌐 Cross-Platform Compatibility**  
+  Runs smoothly on Android, iOS, Windows, macOS, and web browsers without platform-specific code.
 
-- **Native-Like Performance**: Despite being built with web technologies, our application delivers native-like performance thanks to Blazor's efficient rendering and execution model. Users can enjoy fast, responsive interactions, whether they're using a mobile device or a desktop computer.
+- **🧠 Unified Codebase**  
+  Developed using C# and .NET, enabling faster development, easier maintenance, and consistent behavior across platforms.
 
-- **Offline Support**: Blazor Hybrid enables our application to work offline by utilizing service workers and caching mechanisms. This means users can continue to access critical features and data even when they're offline or experiencing a spotty internet connection.
+- **⚡ Native-Like Performance**  
+  Delivers fast and responsive UI interactions using Blazor’s efficient rendering engine.
 
-- **Seamless Integration**: Whether running on a mobile device or in a web browser, our application seamlessly integrates with platform-specific features and APIs. This allows us to leverage device capabilities such as camera access, geolocation, and push notifications to enhance the user experience.
+- **📴 Offline Support**  
+  Works offline using service workers and caching, ensuring uninterrupted access to essential features.
 
-#### For build this type of application you have to use both ***.NET MAUI Blazor Hybrid App*** and ***Blazor WebAssembly Standalone App***.
+- **🔌 Seamless Integration**  
+  Access device-specific features like camera, geolocation, and push notifications for a richer user experience.
+
+## 🛍️ User Features
+
+- **Login / Logout / Sign Up**  
+  Secure authentication with smooth navigation.
+
+- **Product Listing**  
+  Browse fresh fruits and vegetables with:
+  - Real-time pricing
+  - Discounts & savings
+  - Ratings & reviews
+
+- **Cart Management**  
+  Add items to cart, update quantities, and proceed to checkout.
+
+- **Address Handling**  
+  Add and manage delivery addresses.
+
+- **Payment Options**  
+  - Cash on Delivery (COD)  
+  - Online Payment Integration
+
+## 🛠️ Admin Features
+
+- **Role-Based Access Control**  
+  Assign roles like Admin, Customer, etc.
+
+- **User Management**  
+  Add, edit, or remove users with permissions.
+
+- **Product Management**  
+  Add new products, update prices, manage inventory.
+
+- **Inventory Dashboard**  
+  Monitor stock levels and product availability.
+
+## 📸 Updated UI Screenshots
 - Web View of application
-![screencapture-localhost-2024-02-08-16_11_11](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/b9f100d7-fb84-4ade-a247-6dd7bc1fa5e1)
-![screencapture-localhost-cart-2024-02-08-16_12_02](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/7c1107ef-86de-447c-a9ff-d73ef14b299f)
+- **Main Page**  
+![MainPage](https://github.com/user-attachments/assets/f02f7b08-9eee-4d0c-94ab-8aef88b9f43c)
+- **Cart**  
+![Cart](https://github.com/user-attachments/assets/17717232-4c9f-4c1e-971a-8c411b3ac565)
+- **Add Address**  
+![Cart](https://github.com/user-attachments/assets/b8504a7b-0c85-49d8-baa6-e9685ddd1b3a)
+- **Cash on Delivery**  
+![Cart](https://github.com/user-attachments/assets/410c7904-8b54-4485-be9e-e8006f6852f8)
+- **Online Payment** 
+![Cart](https://github.com/user-attachments/assets/0020d3e8-bedc-4f7b-8c7e-c75565a140fa)
+- **Admin Panel**  
+![Cart](https://github.com/user-attachments/assets/e30526ee-4cd4-49e1-a64a-2d1804cb61eb)
+- **Assign Role**  
+![Cart](https://github.com/user-attachments/assets/89706804-3252-4753-851f-d1ce169dbfe8)
+- **Inventory Management**  
+![Cart](https://github.com/user-attachments/assets/a6adaff1-7776-4e29-8460-ae5b260604ba)
 
--Desktop App View of Application
-![desktopapp1](https://github.com/mohitkstartbit/blazor-hybrid-maui-ecommerce-sample/assets/111761900/0480f3e0-c1b1-42ba-bfb3-f4c12a4d722f)
+## 🧰 Technologies Used
+
+- .NET MAUI Blazor Hybrid
+- Blazor WebAssembly
+- C# / .NET 7+
+- Entity Framework Core
+- SQLite / SQL Server
+- REST APIs
+- Authentication & Authorization
+
