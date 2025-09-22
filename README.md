@@ -37,7 +37,7 @@
   Add and manage delivery addresses.
 
 - **Payment Options**  
-  - Cash on Delivery (COD)  
+  - Cash on Delivery 
   - Online Payment Integration
 
 ## 🛠️ Admin Features
